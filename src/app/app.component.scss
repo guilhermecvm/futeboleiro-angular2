@@ -1,0 +1,16 @@
+header {
+  background: rgb(46, 52, 62);
+  color: rgb(255, 255, 255);
+  height: 60px;
+  position: relative;
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}

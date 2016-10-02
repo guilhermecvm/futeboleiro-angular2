@@ -1,0 +1,18 @@
+<div class="team team-left">
+  <img class="team-shield" src={{match.time_casa.escudo}} />
+  <span class="team-name">{{match.time_casa.nome}}</span>
+</div>
+
+<div class="match-details" [ngSwitch]="true">
+  <div class="started" *ngSwitchCase="true">
+    <strong class="score">{{match.time_casa.placar}}</strong>
+    <div class="x">x</div>
+    <strong class="score">{{match.time_visitante.placar}}</strong>
+  </div>
+  <div class="not-started" *ngSwitchCase="false">{{match.hora}}</div>
+</div>
+
+<div class="team team-right">
+  <span class="team-name">{{match.time_visitante.nome}}</span>
+  <img class="team-shield" src={{match.time_visitante.escudo}} />
+</div>
