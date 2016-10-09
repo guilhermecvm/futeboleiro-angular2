@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+// Add the RxJS Observable operators we need in this app.
+import './rxjs-operators';
+
 import { MatchService } from './match.service';
 
 @Component({
@@ -23,6 +26,10 @@ export class AppComponent implements OnInit {
   }
 
   getMatches(): void {
-    this.matchService.getMatches().then(matches => this.matches = matches);
+    this.matchService.getMatches()
+      .subscribe(
+        matches => this.matches = matches,
+        error => console.log(error)
+      );
   }
 }

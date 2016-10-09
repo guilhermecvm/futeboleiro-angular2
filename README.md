@@ -3,7 +3,11 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone and run [futeboleiro-server](https://github.com/guilhermecvm/futeboleiro-server) to work as a proxy and bypass CORS.
+
+Run `ng serve --proxy-config proxy.conf.json` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Your API will be exposed in `http://localhost:4200/api/matches`.
 
 ## Code scaffolding
 
