@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { MatchListComponent } from './match-list/match-list.component';
-import { MatchRowComponent } from './match-row/match-row.component';
+import { MatchesModule } from './matches/matches.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MatchListComponent,
-    MatchRowComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MatchesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
