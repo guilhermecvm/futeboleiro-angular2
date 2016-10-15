@@ -1,54 +1,38 @@
 :host {
-  display: block;
+  display: flex;
   padding: 15px 0;
   border-bottom: 1px solid rgb(236, 236, 236);
 }
 
 .team {
-  display: inline-block;
-  width: calc(50% - 30px);
-  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 100px;
+  align-items: center;
 
-  &-shield {
+  .shield {
     margin: 0 10px;
     vertical-align: middle;
-    width: 30;
+    width: 30px;
   }
 
-  &-name {
-    display: inline-block;
-    width: calc(100% - 50px);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  .name {
+    flex-grow: 1;
   }
 
   &-left {
-    text-align: left;
-
-    .team-name {
-      right: 0;
+    .name {
+      text-align: left;
     }
   }
 
   &-right {
-    text-align: right;
-
-    .team-name {
-      left: 0;
+    .name {
+      text-align: right;
     }
   }
 }
 
 .match-details {
-  display: inline-block;
-  width: 60;
-  text-align: center;
-}
-
-.x, .score {
-  display: inline-block;
+  margin: auto 5px;
 }

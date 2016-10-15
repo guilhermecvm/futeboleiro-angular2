@@ -3,6 +3,8 @@ import { Http, Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 
+import { Live } from './live';
+
 @Injectable()
 export class MatchService {
   private url = '/api/matches';
@@ -18,7 +20,7 @@ export class MatchService {
 
   private mapData(res: Response) {
     let body = res.json();
-    return body || {};
+    return body ? new Live(body) : {};
   }
 
   private handleError(error: any) {
